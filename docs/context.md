@@ -419,9 +419,9 @@ CSS custom properties: `--space-xs` through `--space-2xl` (0.25rem–3rem)
 ## 16. Known Issues & Technical Debt
 
 1. **Notification hook uses localStorage** — `useNotifications` references `mockAccounts` and `mockBills` keys. Should migrate to Supabase tables.
-2. **Mixed language in toasts** — Some category-related toasts are in Portuguese (`useCategoriesData`). Should be standardized to English.
+2. ~~**Mixed language in toasts**~~ — ✅ Fixed (2026-02-11): Standardized to English.
 3. **Duplicate type definitions** — `AuthUser` and `AuthContextType` exist in both `src/types/auth.ts` and `src/contexts/AuthContext.tsx` with slight differences.
-4. **`bg-finapp-background` usage** — Some pages use `bg-finapp-background` while others use `bg-background`. Should be unified.
+4. ~~**`bg-finapp-background` usage**~~ — ✅ Fixed (2026-02-11): Unified to `bg-background` across all pages.
 5. **Account.tsx is a redirect shell** — `pages/Account.tsx` only redirects to `/profile`. Can be removed if route is dropped.
 
 ---
@@ -440,3 +440,4 @@ CSS custom properties: `--space-xs` through `--space-2xl` (0.25rem–3rem)
 | Date | Changes |
 |------|---------|
 | 2026-02-11 | Initial documentation created. Full project audit completed. |
+| 2026-02-11 | Fixed: Portuguese toasts → English, unified `bg-finapp-background` → `bg-background`, improved login network error handling, removed debug console.logs. |

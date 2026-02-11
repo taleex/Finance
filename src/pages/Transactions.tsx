@@ -116,7 +116,7 @@ const Transactions = () => {
 
   if (isLoading || categoriesLoading) {
     return (
-      <div className="min-h-screen bg-finapp-background">
+      <div className="min-h-screen bg-background">
         <Navbar />
         <main className="container mx-auto px-4 py-8">
           <div className="animate-pulse space-y-4">
@@ -130,7 +130,7 @@ const Transactions = () => {
 
   if (isError) {
     return (
-      <div className="min-h-screen bg-finapp-background">
+      <div className="min-h-screen bg-background">
         <Navbar />
         <main className="container mx-auto px-4 py-8">
           <div className="text-center py-12">
@@ -152,7 +152,7 @@ const Transactions = () => {
     categoryFilter !== 'all';
 
   return (
-    <div className="min-h-screen bg-finapp-background">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <main className="container mx-auto px-4 py-6 max-w-7xl">
         {/* Header */}
