@@ -103,6 +103,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       });
       return { data, error };
     } catch (error) {
+      // Handle network errors gracefully
+      if (error instanceof TypeError && error.message === 'Failed to fetch') {
+        return { 
+          data: null, 
+          error: { message: 'Unable to connect to the server. Please check your internet connection and try again.', name: 'NetworkError', status: 0 } as unknown as AuthError 
+        };
+      }
       return { data: null, error: error as AuthError };
     }
   }, []);

@@ -11,7 +11,7 @@ interface PageLayoutProps {
 
 const PageLayout = ({ title, children, actions, isLoading = false }: PageLayoutProps) => {
   return (
-    <div className="min-h-screen bg-finapp-background">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <div className="bg-card border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

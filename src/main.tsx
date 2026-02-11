@@ -22,7 +22,7 @@ const applyInitialTheme = () => {
 
 applyInitialTheme();
 
-console.log('🚀 NEW main.tsx loaded - Fixed version without debug components!');
+
 
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

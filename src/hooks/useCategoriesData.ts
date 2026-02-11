@@ -85,16 +85,16 @@ export const useCategoriesData = () => {
       setCategories(sortCategories(finalCategories));
       
       toast({
-        title: "Categoria criada",
-        description: "Nova categoria criada com sucesso",
+        title: "Category created",
+        description: "New category created successfully",
       });
     } catch (error) {
       console.error('Error creating category:', error);
       // Rollback optimistic update
       setCategories(prev => prev.filter(cat => !cat.id.startsWith('temp-')));
       toast({
-        title: "Erro",
-        description: "Falha ao criar categoria",
+        title: "Error",
+        description: "Failed to create category",
         variant: "destructive",
       });
     }
@@ -117,16 +117,16 @@ export const useCategoriesData = () => {
       if (error) throw error;
       
       toast({
-        title: "Categoria atualizada",
-        description: "Categoria atualizada com sucesso",
+        title: "Category updated",
+        description: "Category updated successfully",
       });
     } catch (error) {
       console.error('Error updating category:', error);
       // Rollback optimistic update
       setCategories(oldCategories);
       toast({
-        title: "Erro",
-        description: "Falha ao atualizar categoria",
+        title: "Error",
+        description: "Failed to update category",
         variant: "destructive",
       });
     }
@@ -146,16 +146,16 @@ export const useCategoriesData = () => {
       if (error) throw error;
       
       toast({
-        title: "Categoria excluída",
-        description: "Categoria excluída com sucesso",
+        title: "Category deleted",
+        description: "Category deleted successfully",
       });
     } catch (error) {
       console.error('Error deleting category:', error);
       // Rollback optimistic update
       setCategories(oldCategories);
       toast({
-        title: "Erro",
-        description: "Falha ao excluir categoria",
+        title: "Error",
+        description: "Failed to delete category",
         variant: "destructive",
       });
     }
