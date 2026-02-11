@@ -30,7 +30,7 @@ const queryClient = new QueryClient({
 });
 
 function App() {
-  console.log('🚀 NEW App.tsx loaded - Fixed version with proper routing!');
+  
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
